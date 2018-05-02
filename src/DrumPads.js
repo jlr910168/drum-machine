@@ -1,17 +1,21 @@
 import React, { Component, createRef } from 'react';
+import './DrumPads.css';
 
 class DrumPads extends Component {
   render() {
     return (
-      this.props.pads.map(pad =>
-        <DrumPad
-          id={pad.button}
-          src={pad.src}
-          key={pad.button}
-          button={pad.button}
-          audioName={pad.audioName}
-          displaySoundName={this.props.displaySoundName}
-        />)
+      <div className="drum-pads">
+        {
+          this.props.pads.map(pad =>
+          <DrumPad
+            src={pad.src}
+            key={pad.button}
+            button={pad.button}
+            audioName={pad.audioName}
+            displaySoundName={this.props.displaySoundName}
+          />)
+        }
+      </div>
     );
   }
 }
@@ -19,11 +23,14 @@ class DrumPads extends Component {
 class DrumPad extends Component {
 
   audio = createRef();
+  state = {
+    active: false,
+  }
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyPress);
     const audio = this.audio.current;
-    audio.volume = 0.1;
+    audio.volume = 0.2;
   }
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyPress);
@@ -32,21 +39,32 @@ class DrumPad extends Component {
   handleKeyPress = (e) => {
     if (e.key === this.props.button) {
       this.play();
-      this.props.displaySoundName(this.props.audioName);
     }
   }
-
+  
   play = () => {
     const audio = this.audio.current;
     audio.currentTime = 0;
     audio.play();
+    this.props.displaySoundName(this.props.audioName);
+    this.setState({ active: true });
+    setTimeout(() => {
+      this.setState({ active: false });
+    }, 100);
   }
 
   render() {
+    const className = `pad${this.state.active ? ' active' : ''}`;
     return (
-      <div style={{display: 'inline-block'}}>
-        <button onClick={this.play}>{this.props.button.toUpperCase()}</button>
-        <audio src={this.props.src} ref={this.audio} />
+      <div
+        className={className}
+        onClick={this.play}
+      >
+        {this.props.button}
+        <audio
+          src={process.env.PUBLIC_URL + this.props.src}
+          ref={this.audio}
+        />
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DrumPads from './DrumPads';
 import Display from './Display';
+import './App.css';
 import banks from './sound-banks.json';
 
 class App extends Component {
@@ -15,14 +16,13 @@ class App extends Component {
   render() {
     return (
       <div id="drum-machine">
-        <h1>Drum Machine</h1>
-        <DrumPads
-          pads={this.state.pads}
-          displaySoundName={this.displaySoundName}
-        />
         <Display
           id="display"
           display={this.state.display}
+        />
+        <DrumPads
+          pads={this.state.pads}
+          displaySoundName={this.displaySoundName}
         />
       </div>
     );
