@@ -23,5 +23,5 @@ const banks = bankNames.map(bankName => {
     pads,
   }
 });
-const banksJson = JSON.stringify(banks, null, 2);
+const banksJson = JSON.stringify(banks, null, 2).concat('\n');
 fs.writeFileSync(banksFile, banksJson);
