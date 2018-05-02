@@ -1,101 +1,151 @@
 [
   {
-    "name": "patron",
+    "name": "Korg_DDM110",
     "pads": [
       {
         "button": "q",
-        "audioName": "warsong-play.ogg",
-        "src": "/static/media/sounds/patron/warsong-play.ogg"
+        "audioName": "ddm-bd",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-bd.wav"
       },
       {
         "button": "w",
-        "audioName": "patron-play.ogg",
-        "src": "/static/media/sounds/patron/patron-play.ogg"
+        "audioName": "ddm-ch",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-ch.wav"
       },
       {
         "button": "e",
-        "audioName": "berserk-play.ogg",
-        "src": "/static/media/sounds/patron/berserk-play.ogg"
+        "audioName": "ddm-cp",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-cp.wav"
       },
       {
         "button": "a",
-        "audioName": "whirlwind.ogg",
-        "src": "/static/media/sounds/patron/whirlwind.ogg"
+        "audioName": "ddm-cy",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-cy.wav"
       },
       {
         "button": "s",
-        "audioName": "patron-trigger.ogg",
-        "src": "/static/media/sounds/patron/patron-trigger.ogg"
+        "audioName": "ddm-ht",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-ht.wav"
       },
       {
         "button": "d",
-        "audioName": "patron-attack.ogg",
-        "src": "/static/media/sounds/patron/patron-attack.ogg"
+        "audioName": "ddm-lt",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-lt.wav"
       },
       {
         "button": "z",
-        "audioName": "minion-attack.ogg",
-        "src": "/static/media/sounds/patron/minion-attack.ogg"
+        "audioName": "ddm-oh",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-oh.wav"
       },
       {
         "button": "x",
-        "audioName": "berserk-attack.ogg",
-        "src": "/static/media/sounds/patron/berserk-attack.ogg"
+        "audioName": "ddm-rs",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-rs.wav"
       },
       {
         "button": "c",
-        "audioName": "minion-attack-big.ogg",
-        "src": "/static/media/sounds/patron/minion-big-attack.ogg"
+        "audioName": "ddm-sd",
+        "src": "/static/media/sounds/Korg_DDM110/ddm-sd.wav"
       }
     ]
   },
   {
-    "name": "piano",
+    "name": "MTI_AO-1",
     "pads": [
       {
         "button": "q",
-        "audioName": "Chord-1.mp3",
-        "src": "/static/media/sounds/piano/Chord-1.mp3"
+        "audioName": "mtibongo",
+        "src": "/static/media/sounds/MTI_AO-1/mtibongo.wav"
       },
       {
         "button": "w",
-        "audioName": "Chord-2.mp3",
-        "src": "/static/media/sounds/piano/Chord-2.mp3"
+        "audioName": "mticlave",
+        "src": "/static/media/sounds/MTI_AO-1/mticlave.wav"
       },
       {
         "button": "e",
-        "audioName": "Chord-3.mp3",
-        "src": "/static/media/sounds/piano/Chord-3.mp3"
+        "audioName": "mticonga",
+        "src": "/static/media/sounds/MTI_AO-1/mticonga.wav"
       },
       {
         "button": "a",
-        "audioName": "Closed-HH.mp3",
-        "src": "/static/media/sounds/piano/Closed-HH.mp3"
+        "audioName": "mticow",
+        "src": "/static/media/sounds/MTI_AO-1/mticow.wav"
       },
       {
         "button": "s",
-        "audioName": "Open-HH.mp3",
-        "src": "/static/media/sounds/piano/Open-HH.mp3"
+        "audioName": "mticymb1",
+        "src": "/static/media/sounds/MTI_AO-1/mticymb1.wav"
       },
       {
         "button": "d",
-        "audioName": "Punchy-Kick.mp3",
-        "src": "/static/media/sounds/piano/Punchy-Kick.mp3"
+        "audioName": "mticymb2",
+        "src": "/static/media/sounds/MTI_AO-1/mticymb2.wav"
       },
       {
         "button": "z",
-        "audioName": "Shaker.mp3",
-        "src": "/static/media/sounds/piano/Shaker.mp3"
+        "audioName": "mtihh",
+        "src": "/static/media/sounds/MTI_AO-1/mtihh.wav"
       },
       {
         "button": "x",
-        "audioName": "Side-Stick.mp3",
-        "src": "/static/media/sounds/piano/Side-Stick.mp3"
+        "audioName": "mtikick",
+        "src": "/static/media/sounds/MTI_AO-1/mtikick.wav"
       },
       {
         "button": "c",
-        "audioName": "Snare.mp3",
-        "src": "/static/media/sounds/piano/Snare.mp3"
+        "audioName": "mtisnare",
+        "src": "/static/media/sounds/MTI_AO-1/mtisnare.wav"
+      }
+    ]
+  },
+  {
+    "name": "YamahaCS-40M",
+    "pads": [
+      {
+        "button": "q",
+        "audioName": "Bell",
+        "src": "/static/media/sounds/YamahaCS-40M/Bell.wav"
+      },
+      {
+        "button": "w",
+        "audioName": "Cymbal-1",
+        "src": "/static/media/sounds/YamahaCS-40M/Cymbal-1.wav"
+      },
+      {
+        "button": "e",
+        "audioName": "Cymbal-2",
+        "src": "/static/media/sounds/YamahaCS-40M/Cymbal-2.wav"
+      },
+      {
+        "button": "a",
+        "audioName": "Kick",
+        "src": "/static/media/sounds/YamahaCS-40M/Kick.wav"
+      },
+      {
+        "button": "s",
+        "audioName": "Klank",
+        "src": "/static/media/sounds/YamahaCS-40M/Klank.wav"
+      },
+      {
+        "button": "d",
+        "audioName": "Snare-1",
+        "src": "/static/media/sounds/YamahaCS-40M/Snare-1.wav"
+      },
+      {
+        "button": "z",
+        "audioName": "Snare-2",
+        "src": "/static/media/sounds/YamahaCS-40M/Snare-2.wav"
+      },
+      {
+        "button": "x",
+        "audioName": "Snare-3",
+        "src": "/static/media/sounds/YamahaCS-40M/Snare-3.wav"
+      },
+      {
+        "button": "c",
+        "audioName": "Tom",
+        "src": "/static/media/sounds/YamahaCS-40M/Tom.wav"
       }
     ]
   }
