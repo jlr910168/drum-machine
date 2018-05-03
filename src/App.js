@@ -6,22 +6,27 @@ import './App.css';
 import banks from './sound-banks.json';
 
 class App extends Component {
-  banks = banks;
   state = {
-    pads: this.banks[0].pads,
+    bankId: 0,
     display: '\u00A0',
     power: false,
   }
-  displaySoundName = display => {
+  display = display => {
     this.setState({ display });
   }
   togglePower = () => {
-    this.setState({ 
+    // 1. power: true -> false - display nothing
+    // 2. power: false -> true - display bank name
+    const id = this.state.bankId;
+    const display = this.state.power ? '\u00A0' :  banks[id].name;
+    this.setState({
       power: !this.state.power,
-      display: banks[0].name,
+      display,
     });
   }
   render() {
+    const id = this.state.bankId;
+    const pads = banks[id].pads;
     return (
       <div id="drum-machine">
         <Power
@@ -29,13 +34,13 @@ class App extends Component {
           togglePower={this.togglePower}
         />
         <Display
-          display={this.state.display}
           power={this.state.power}
+          display={this.state.display}
         />
         <DrumPads
-          pads={this.state.pads}
           power={this.state.power}
-          displaySoundName={this.displaySoundName}
+          pads={pads}
+          display={this.display}
         />
       </div>
     );

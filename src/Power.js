@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Power.css';
 
 class Power extends Component {
-
   state = {
     active: false,
   }
@@ -13,11 +12,8 @@ class Power extends Component {
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
-
   handleKeyPress = (e) => {
-    if (e.key === 'Enter') {  
-      this.activated();
-    }
+    if (e.key === 'Enter') this.activated();
   }
 
   activated = () => {
@@ -27,7 +23,7 @@ class Power extends Component {
   }
 
   render() {
-    const className = `power${this.state.active ? ' active' : ''}`;
+    const className = this.state.active ? 'power active' : 'power';
     const power = this.props.power ? 'on' : 'off';
     return (
       <div
