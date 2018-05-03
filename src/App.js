@@ -16,7 +16,10 @@ class App extends Component {
     this.setState({ display });
   }
   togglePower = () => {
-    this.setState({ power: !this.state.power });
+    this.setState({ 
+      power: !this.state.power,
+      display: banks[0].name,
+    });
   }
   render() {
     return (
