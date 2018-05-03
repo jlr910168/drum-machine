@@ -6,14 +6,16 @@ class DrumPads extends Component {
     return (
       <div className="drum-pads">
         {
-          this.props.pads.map(pad =>
-          <DrumPad
-            src={pad.src}
-            key={pad.button}
-            button={pad.button}
-            audioName={pad.audioName}
-            displaySoundName={this.props.displaySoundName}
-          />)
+          this.props.pads.map(pad => 
+            <DrumPad
+              power={this.props.power}
+              src={pad.src}
+              key={pad.button}
+              button={pad.button}
+              audioName={pad.audioName}
+              displaySoundName={this.props.displaySoundName}
+            />
+          )
         }
       </div>
     );
@@ -43,14 +45,15 @@ class DrumPad extends Component {
   }
   
   play = () => {
+    // show button presses anyway
+    this.setState({ active: true });
+    setTimeout(() => this.setState({ active: false }), 100);
+    // without power do nothing more
+    if (!this.props.power) return;
     const audio = this.audio.current;
     audio.currentTime = 0;
     audio.play();
     this.props.displaySoundName(this.props.audioName);
-    this.setState({ active: true });
-    setTimeout(() => {
-      this.setState({ active: false });
-    }, 100);
   }
 
   render() {
