@@ -13,24 +13,25 @@ class Power extends Component {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
   handleKeyPress = (e) => {
-    if (e.key === 'Enter') this.activated();
+    if (e.key === 'Enter') this.press();
   }
 
-  activated = () => {
+  press = () => {
     this.props.togglePower();
     this.setState({ active: true });
     setTimeout(() => this.setState({ active: false }), 100);
   }
 
   render() {
-    const className = this.state.active ? 'power active' : 'power';
-    const power = this.props.power ? 'on' : 'off';
+    const btnClass = this.state.active ? 'power active' : 'power';
+    const ledClass = this.props.power ? 'led active' : 'led';
     return (
       <div
-        className={className}
-        onClick={this.activated}
+        className={btnClass}
+        onClick={this.press}
       >
-       power {power}
+       power
+       <div className={ledClass} />
       </div>
     )
   }
